@@ -1,1 +1,43 @@
-Nothing 
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        
+        String name = "Jarrel Prince";
+        int age = 19;
+        String gender = "Male";
+        String studentid = "2026-00515";
+        String year = "1st year";
+        String section = "BSIS-1A";
+        String course = "Bachelor science of information";
+        
+        System.out.println("enter grade for nstp");
+        double grade1 = sc.nextDouble();
+        System.out.println("enter grade for STS");
+        double grade2 = sc.nextDouble();
+        System.out.println("enter grade for UTS");
+        double grade3 = sc.nextDouble();
+        
+        double average =(grade1 + grade2 + grade3) /3;
+        double passingGrade = 75;
+        String remark = (average >= passingGrade)? "Passed" : "Failed" ;
+        
+        System.out.println("STUDENT INFORMATION");
+        System.out.println("Name:" + name);
+        System.out.println("Age:" + age);
+        System.out.println("Gender:" + gender);
+        System.out.println("StudentId:" + studentid);
+        System.out.println("Year:" + year);
+        System.out.println("Section:" + section);
+        System.out.println("Course:" + course);
+        System.out.println("GRADE");
+        System.out.println("NSTP:" + grade1);
+        System.out.println("STS:" + grade2);
+        System.out.println("UTS:" + grade3);
+        System.out.println("General Average:" + average);
+        System.out.println("Remarks:" + remark);
+        sc.close();
+        
+        
+      }
+}
